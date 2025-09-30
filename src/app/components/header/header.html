@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="header-toolbar">
+  <img src="https://static.www.nfl.com/image/upload/v1554321393/league/nvfr7ogywskqrfaiu38m.svg" alt="NFL Logo" class="logo">
+  <span class="title">NFL Predictor Admin🏈</span>
+
+  <!-- Espaciador -->
+  <span class="spacer"></span>
+
+  <!-- Menú en desktop -->
+  <nav class="menu-desktop">
+    <button class="menu-button" mat-button routerLink="/">
+      <mat-icon class="icon">home</mat-icon> Home
+    </button>
+  </nav>
+
+  <!-- Menú hamburguesa en móvil -->
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-mobile">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
+</mat-menu>
+
