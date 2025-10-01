@@ -7,8 +7,14 @@
 
   <!-- Menú en desktop -->
   <nav class="menu-desktop">
-    <button class="menu-button" mat-button routerLink="/">
+    <button class="menu-button" mat-button routerLink="/home">
       <mat-icon class="icon">home</mat-icon> Home
+    </button>
+    <button class="menu-button" mat-button routerLink="/puntajes">
+      <mat-icon class="icon">leaderboard</mat-icon> Puntajes
+    </button>
+    <button class="menu-button" (click)="logout()" mat-button routerLink="/">
+      <mat-icon class="icon" >logout</mat-icon> Logout
     </button>
   </nav>
 
@@ -18,9 +24,17 @@
   </button>
 
 <mat-menu #menu="matMenu">
-  <button mat-menu-item routerLink="/">
+  <button mat-menu-item routerLink="/home">
     <mat-icon>home</mat-icon>
     <span>Home</span>
+  </button>
+  <button mat-menu-item routerLink="/puntajes">
+    <mat-icon>leaderboard</mat-icon>
+    <span>Puntajes</span>
+  </button>
+  <button mat-menu-item (click)="logout()" routerLink="/">
+    <mat-icon>logout</mat-icon>
+    <span>Logout</span>
   </button>
 </mat-menu>
 

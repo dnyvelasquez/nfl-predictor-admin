@@ -5,7 +5,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { Service } from '../../services/data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -21,6 +22,13 @@ import { MatMenuModule } from '@angular/material/menu';
   templateUrl: './header.html',
   styleUrls: ['./header.css'] 
 })
-export class Header {
 
+export class Header {
+  
+  constructor(private service: Service, private router: Router) {}
+
+  logout(): void {
+    this.service.logout();
+    window.location.href = '/login';
+  }  
 }
