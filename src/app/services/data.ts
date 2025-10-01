@@ -61,10 +61,8 @@ export class Service {
     ).pipe(
       map((res: any) => {
         if (res.error || !res.data) {
-          console.error('❌ Error en login:', res.error);
           return false;
         }
-        console.log('✅ Usuario encontrado:', res.data);
         return true;
       })
     );

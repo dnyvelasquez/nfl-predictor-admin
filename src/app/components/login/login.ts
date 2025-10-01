@@ -40,7 +40,6 @@ export class Login {
       const { nombre, contrasena } = this.form.value;
       this.service.login(nombre!, contrasena!).subscribe(success => {
         if (success) {
-          console.log('✅ Login exitoso');
           localStorage.setItem('nombre', nombre!);
           this.router.navigate(['/home']);
         } else {
